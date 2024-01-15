@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Scope+One|Trocchi");
+
+*,/*todos los elementos*/
+*::before, /*para asegurar que los elementos generados por CSS de forma dinámica también sigan estas reglas*/
+*::after {
+  box-sizing: border-box; /* sin esta regla, el ancho y alto de un elemento se calcula sin tener en cuenta el relleno y el borde*/
+  margin: 0;  /* para garantizar que no haya márgenes o rellenos no deseados aplicados de forma predeterminada por el navegador*/
+  padding: 0;
+}
+
+:root{
+    --white: white;
+    --blue: #3498db;
+    --lightblue: rgb(140, 191, 222);
+    --grey: #999999;
+    --dark-grey: rgb(153, 156, 159);
+    --lightgray: rgb(217, 218, 218);
+}
+
+/*FLEX----------------------------------------------------------------------------*/
+nav, .menu, .posts-first-section article, .posts-second-section, header div, .posts-first-section div, .social-media{
+    display: flex;
+}
+
+.posts-first-section article:nth-child(2){
+    flex-direction: row-reverse;
+}
+
+header div, .posts-first-section div{
+    flex-direction: column; 
+}
+
+nav, .header-title, .menu{
+    align-items: center;
+}
+
+.header-title {
+    flex-direction: center;
+}
+
+.social-media{
+    justify-content: center;
+}
+
+.menu{
+    flex-direction: row;
+}
+
+.posts-second-section, .header-second-section, footer{
+    text-align: center;
+}
+
+/*COLORES-------------------------------------------------------------------------*/
+header, .blue-button, .posts-first-section article:nth-child(2) {
+    color: var(--white);
+}
+
+header p span, .white-button{
+    color: var(--blue)
+}
+
+header div p, .posts-first-section p, footer p {
+    color: var(--lightgray);
+}
+
+.posts-first-section article:nth-child(2) p{
+    color: var(--lightblue);
+}
+
+.posts-first-section p, .second-section p, footer i, footer span{
+    color: var(--dark-grey);
+}
+
+.blue-button{
+    border: 1px solid var(--blue);
+}
+
+.white-button{
+    background-color: var(--white);
+}
+
+.white-button, .posts-first-section article:nth-child(2) img{
+    border: 1px solid var(--white);
+}
+
+.blue-button, .posts-first-section article:nth-child(2) {
+    background-color: var(--blue);
+}
+
+img, footer .social-media div, footer i, footer .social-media div{
+    border: 1px solid var(--grey);
+    border-radius: 50%;
+}
+
+footer i, footer .social-media div{
+    border: 1px solid var(--lightgray);
+}
+
+
+/*BODY----------------------------------------------------------------------------*/
+body{
+    font-family: "Scope One", serif;
+}
+
+/*HEADER-------------------------------------------------------------------------*/
+header{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50em;
+}
+
+nav{
+    justify-content:space-between;
+    padding: 2em;
+}
+
+.menu i{
+    margin-right: 0.5em;
+}
+
+header h1{
+    font-size: 5em;
+}
+
+.header-title{
+    padding: 10em;
+}
+
+.header-title p{
+    margin-bottom: 2em;
+}
+
+button{
+    border-radius: 5px;
+    padding: 1em;
+    width: 10em;
+}
+
+/*POSTS-FIRST-SECTION y SECOND-SECTION------------------------------------------------------------*/
+.posts-first-section article, .second-section{
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+img{
+    padding: 0.5em;
+    width: 25em;
+}
+
+.posts-first-section div, .second-section article{
+    padding: 2em;
+}
+
+.second-section h1{
+    margin-top: 1em;
+}
+
+.posts-first-section div h2, .posts-first-section div p, .second-section h1, .second-section p, .second-section img {
+    margin-bottom: 2em;
+}
+
+.second-section h1{
+    font-size: 3em;
+}
+
+.second-section p{
+    font-size: 1.2em;
+}
+
+/*FOOTER----------------------------------------------------------------------------------------*/
+footer .social-media div {
+    padding: 0.1em;
+    width: 4em;
+    margin-right: 0.5em;
+}
+
+footer i {
+    padding: 0.4em;
+}
+
+
+.social-media{
+    margin-bottom: 5em;
+}
+
+footer p{
+    padding: 3em;
+}
+
