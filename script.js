@@ -27,12 +27,20 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /*Menú hamburguesa*/
-/*document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.getElementById("nav");
-    //const nav = document.querySelector("#nav");
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".menu"); 
+    const menu2 = document.querySelector(".menu2"); 
     const abrir = document.getElementById("abrir");
     const cerrar = document.getElementById("cerrar");
 
-    abrir.addEventListener("click", () => {  nav.classList.add("visible")});
-    cerrar.addEventListener("click", () => { nav.classList.remove("visible") });
-});*/
+    abrir.addEventListener("click", () => { 
+        menu.classList.toggle("invisible");
+        menu2.classList.toggle("invisible");
+    });
+
+    cerrar.addEventListener("click", () => { 
+        menu.classList.toggle("invisible"); 
+        menu2.classList.toggle("invisible"); 
+    });
+});
+
