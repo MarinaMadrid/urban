@@ -51,6 +51,17 @@ nav, .header-title, .menu{
     text-align: center;
 }
 
+/*FLEX SIN MEDIA QUERY-------------------------------------------------------*/
+.posts-second-section{
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.posts-second-section > *{
+    flex-grow: 1;
+    flex-basis: 15rem;
+}
+
 /*COLORES-------------------------------------------------------------------------*/
 header, .blue-button, .posts-first-section article:nth-child(2) {
     color: var(--white);
@@ -125,39 +136,43 @@ header{
 nav{
     justify-content:space-between;
     padding: 2em;
+    /* visibility: hidden; */
 }
 
-/*
 .nav-list{
     list-style:none;
     display:flex;
-    
+    background-color: #1c1c1c;
+    width: 10vh;
   }
+
   .nav-list li a{
     text-decoration:none;
     color: white;
   }
-  .abrir-menu{display:visible;}
+  /* .abrir-menu{display:visible;} */
   .cerrar-menu{display:none;}
   
-  .abrir-menu,.cerrar-menu{
+  .abrir-menu,.cerrar-menu, .menuu {
     display:block;
     border:0;
     font-size:1.25rem;
     background:transparent;
     cursor:pointer;  
     position:absolute;
-    top:0;
     right:0;
     top:0;
-    right:0;
+  }
+
+  .menuu{
+margin-left: 5vh;
   }
     .cerrar-menu{color:#fff;}
     .nav{
-        opacity:0;
+        opacity:0;/*100% transparente*/
         transition:opacity 1s ease-in-out;
-        visibility:hidden;
-        display:flex; 
+        /* visibility:hidden;necesario para que reciba el click el botton abrir que esta debajo */
+        display:flex; /*para acomodar el boton con la lista a la derecha*/
         flex-direction:column;
         align-items:end;
         gap:1rem;
@@ -166,15 +181,21 @@ nav{
         box-shadow:0 0 0 100vmax rgba(0,0,0,.5); 
         padding:1.5rem;
     }
-    .nav.visible{
-        opacity:1;
-        visibility:visible;
+    .invisible{
+        /* opacity:1; */
+        visibility:hidden;
     }
+
     .nav-list{
         flex-direction:column;
         align-items:end;
         gap:2rem;
     }
+
+
+hr{
+    width: 5vh;
+}
 
 /*.menu .abrir-menu {*/
 .menu i{
@@ -251,12 +272,6 @@ footer p{
 }
 
 /*MEDIA QUERIES----------------------------------------------------------------------------------*/
-@media screen and (max-width: 1300px) {
-    .posts-second-section {
-        flex-direction: column;
-    }
-}
-
 @media screen and (max-width: 750px) {
     .posts-first-section article, .posts-first-section article:nth-child(2) {
         flex-direction: column;
