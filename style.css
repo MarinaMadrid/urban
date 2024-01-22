@@ -161,8 +161,15 @@ nav p{
     background-color: var(--black-nav);
     gap:2rem;
     padding: 5em;
-    width: 15em;   /*Anchura del menú*/
+    width: 16em;   /*Anchura del menú*/
     height: 100vh; /*Altura del menú */
+}
+
+.menu{
+    width: 20vh; /*Mueve el menú a la izquierda (si se aumenta tamaño)/derecha*/
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .nav-list li {
@@ -171,6 +178,10 @@ nav p{
 
 .nav-list li a{
     text-decoration:none;
+}
+
+.cerrar-menu, .invisible{
+    display:none;
 }
   
 .abrir-menu,.cerrar-menu, .menu-title {
@@ -190,18 +201,10 @@ nav p{
 .menu-title{
     margin-top: 1em;
 }
-    
-.cerrar-menu, .invisible{
-    display:none;
-}
 
 hr{
     width: 20vh;
     border-color: var(--darkness-grey);
-}
-
-.menu{
-    width: 20vh; /*Mueve el menú a la izquierda (si se aumenta tamaño)/derecha*/
 }
 
 header h1{

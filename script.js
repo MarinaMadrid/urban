@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             navbar.style.width = "100%";
             navbar.style.maxHeight = "0.5em";
             navbar.style.height = Math.max(minHeight, Math.min(maxHeight, maxHeight - window.scrollY + headerHeight)) + "em";
-            navbar.style.padding = "1em";
+            navbar.style.padding = "2em";
         } else {
             navbar.style.position = "static"; 
             navbar.style.backgroundColor = "transparent";
