@@ -172,6 +172,10 @@ nav p{
     top: 0;
 }
 
+.menu-title, .abrir-menu{
+    margin-right: 2vh;
+}
+
 .nav-list li {
     margin-right: 0;
 }

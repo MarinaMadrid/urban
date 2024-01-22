@@ -6,22 +6,21 @@ document.addEventListener("DOMContentLoaded", function() {
     var maxHeight = 10;
     var minHeight = 3;
 
+    navbar.style.padding = "2em";
+    navbar.style.maxHeight = "0.5em";
+
     window.addEventListener("scroll", function() {
         if (window.scrollY >= headerHeight) {
             navbar.style.position = "fixed";
             navbar.style.top = "0";
             navbar.style.backgroundColor = "rgba(0,0,0,0.7)";
             navbar.style.width = "100%";
-            navbar.style.maxHeight = "0.5em";
             navbar.style.height = Math.max(minHeight, Math.min(maxHeight, maxHeight - window.scrollY + headerHeight)) + "em";
-            navbar.style.padding = "2em";
         } else {
             navbar.style.position = "static"; 
             navbar.style.backgroundColor = "transparent";
             navbar.style.width = "auto";
-            navbar.style.maxHeight = "none";
             navbar.style.height = "auto";
-            navbar.style.padding = "2em";
         }
     });
 });
