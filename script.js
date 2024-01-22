@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
     navbar.style.maxHeight = "0.5em";
 
     window.addEventListener("scroll", function() {
-        if (window.scrollY >= headerHeight) {
+        if (window.scrollY >= headerHeight) { /*Cambios cuando se hace scroll hacia abajo y supera la altura de header*/
             navbar.style.position = "fixed";
             navbar.style.top = "0";
             navbar.style.backgroundColor = "rgba(0,0,0,0.7)";
             navbar.style.width = "100%";
             navbar.style.height = Math.max(minHeight, Math.min(maxHeight, maxHeight - window.scrollY + headerHeight)) + "em";
-        } else {
+        } else { /*Cambios cuando se hace scroll hacia arriba por la altura del header*/
             navbar.style.position = "static"; 
             navbar.style.backgroundColor = "transparent";
             navbar.style.width = "auto";
