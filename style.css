@@ -45,10 +45,6 @@ nav, .header-title, .menu, .nav-list{
     justify-content: center;
 }
 
-.menu-main{
-    flex-direction: row;
-}
-
 .posts-second-section, .header-second-section, footer{
     text-align: center;
 }
