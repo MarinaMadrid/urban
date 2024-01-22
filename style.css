@@ -191,7 +191,7 @@ nav p{
     margin-top: 1em;
 }
     
-.invisible, .cerrar-menu{
+.cerrar-menu, .invisible{
     display:none;
 }
 
