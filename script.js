@@ -29,18 +29,18 @@ document.addEventListener("DOMContentLoaded", function() {
 /*Menú hamburguesa*/
 document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector(".menu"); 
-    const menu2 = document.querySelector(".menu2"); 
+    const menuMain = document.querySelector(".menu-main"); 
     const abrir = document.getElementById("abrir");
     const cerrar = document.getElementById("cerrar");
 
     abrir.addEventListener("click", () => { 
         menu.classList.toggle("invisible");
-        menu2.classList.toggle("invisible");
+        menuMain.classList.toggle("invisible");
     });
 
     cerrar.addEventListener("click", () => { 
         menu.classList.toggle("invisible"); 
-        menu2.classList.toggle("invisible"); 
+        menuMain.classList.toggle("invisible"); 
     });
 });
 
